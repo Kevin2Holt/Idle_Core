@@ -1,0 +1,24 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	
++++ b/app/src/main/res/layout/activity_main.xml	(date 1690376206747)
+@@ -126,6 +126,15 @@
+         app:layout_constraintTop_toTopOf="parent"
+         android:background="@color/background">
+ 
++        <TextView android:id="@+id/idleCoreTitle"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="Idle Core"
++            android:textSize="80dp"
++            android:layout_marginBottom="-60dp"
++            app:layout_constraintBottom_toTopOf="@id/avniLogo"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"/>
+ 
+         <ImageView android:id="@+id/avniLogo"
+             android:layout_width="326dp"

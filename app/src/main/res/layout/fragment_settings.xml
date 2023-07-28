@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+* This code is designed, developed, and maintained by Kevin Holt.
+* You may not copy, distribute, or reuse any part of this project.
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SettingsFragment"
+    android:theme="@style/Theme.IdleCore">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/helpButton"
+                android:layout_width="215dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="75dp"
+                android:text="Help"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView android:id="@+id/updateIntervalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Interval:"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="150dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView android:id="@+id/updateIntervalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[VALUE]"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@+id/updateIntervalLabel"
+                app:layout_constraintTop_toTopOf="@+id/updateIntervalLabel" />
+
+            <SeekBar android:id="@+id/updateIntervalInput"
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/updateIntervalLabel"
+                app:layout_constraintStart_toStartOf="@id/updateIntervalLabel"
+                android:max="10000"
+                android:min="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
